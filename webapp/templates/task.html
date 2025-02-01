@@ -10,6 +10,7 @@
     {% for task in tasks %}
     <h2>Tarea {{ task.id }}: {{ task.title }}</h2>
     <h3>Descripcion: {{ task.description }}</h3>
+    <h4>Realizada: {{ task.done }}</h4> 
     <button>Nuevo</button>
     <button>Eliminar</button>
     <button>Editar</button>
