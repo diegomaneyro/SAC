@@ -12,9 +12,9 @@ def about(request):
     return render(request, 'about.html')
 
 def tasks(request):
-    task =  Task.objects.get(id=1)
-    return render(request, 'task.html', {'task': task})
+    tasks =  Task.objects.all().order_by('id')
+    return render(request, 'task.html', {'tasks': tasks})
 
 def projects(request):
-    projects = Projects.objects.all()
+    projects = Project.objects.all()
     return render(request, 'projects.html', {'projects' : projects})
