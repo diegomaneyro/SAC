@@ -14,7 +14,7 @@ class Project(models.Model):
 class Task(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    done = models.BooleanField()
+    done = models.BooleanField(default=False)
     project = models.ForeignKey(Project, on_delete = models.CASCADE)
 
     def __str__(self):

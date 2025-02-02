@@ -1,0 +1,19 @@
+{% extends 'layout/base2.html' %}
+{% block title %}Tasks{% endblock %}
+
+{% block content %}
+    <h1>Tareas</h1>
+    {% for task in tasks %}
+    <h2>Tarea {{ task.id }}: {{ task.title }}</h2>
+    {% if task.done == False %}
+    <h2>Tarea Pendiente</h2>
+    {% else %}
+    <h2>Tarea Realizada</h2>
+    {% endif %}
+    <h4>Realizada: {{ task.done }}</h4> 
+    <button>Nuevo</button>
+    <button>Eliminar</button>
+    <button>Editar</button>
+    {% endfor%}
+{% endblock %}
+    
